@@ -170,5 +170,9 @@ angular.module('core').service('Menus', [
     this.addMenu('topbar', {
       roles: ['*']
     });
+
+    this.addMenu('pr-nav', {
+      roles: ['*']
+    });
   }
 ]);
