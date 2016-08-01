@@ -1,8 +1,10 @@
 {% extends 'layout.server.view.html' %}
 
 {% block content %}
-<h1>Server Error</h1>
-<pre>
-  {{error}}
-</pre>
+<md-content flex layout-padding class="md-warn">
+    <h1>Server Error</h1>
+    <pre>
+        {{error}}
+    </pre>
+</md-content>
 {% endblock %}
