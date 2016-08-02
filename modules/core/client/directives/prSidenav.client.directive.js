@@ -1,5 +1,6 @@
 'use strict';
 
+//noinspection JSAnnotator
 angular.module('core')
   .directive('prSidenav', ['$mdSidenav', 'Menus', function ($mdSidenav, Menus) {
     return {
@@ -7,7 +8,7 @@ angular.module('core')
       scope: {},
       templateUrl: 'modules/core/client/views/prSidenav.html',
       link: function (scope, element, attrs) {
-        $mdSidenav('pr-sidenav').open();
+        // $mdSidenav('pr-sidenav').open();
 
         scope.close = function () {
           $mdSidenav('pr-sidenav').close();
