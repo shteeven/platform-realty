@@ -38,11 +38,34 @@
   {% endfor %}
 </head>
 
-<body class="ng-cloak" id="body" data-scrollspy-broadcast >
-<header ng-include="'/modules/core/client/views/header.client.view.html'"></header>
-<section>
+<body class="ng-cloak" layout="column">
+
+<md-content id="content-view" flex="100" scrollspy-nav>
+  <!-- END HEADER -->
+  <md-toolbar id="masthead" layout="row">
+    <md-content></md-content>
+  </md-toolbar>
+
+  <md-toolbar id="topnav" ng-class="{'transparent': !scrolling}" ng-controller="HeaderController">
+
+    <div class="md-toolbar-tools">
+      <md-button class="md-icon-button" ng-click="toggleSideNav()" aria-label="Toggle Side Nav">
+        <md-icon md-font-library="material-icons">menu</md-icon>
+      </md-button>
+      <h2>
+        <span>Toolbar with Disabled/Enabled Icon Buttons</span>
+      </h2>
+      <span flex></span>
+
+    </div>
+  </md-toolbar>
+
+  <!-- END HEADER -->
+
   {% block content %}{% endblock %}
-</section>
+
+</md-content>
+<pr-sidenav></pr-sidenav>
 
 <!--Embedding The User Object-->
 <script type="text/javascript">

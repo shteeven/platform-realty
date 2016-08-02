@@ -5,5 +5,16 @@
 .x-ng-cloak {
   display: none !important; }
 
-.active {
-  height: 1000px; }
+#topnav {
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  -webkit-transition: background-color 375ms ease-in-out;
+          transition: background-color 375ms ease-in-out; }
+
+#topnav.transparent {
+  background: transparent; }
+
+#masthead {
+  min-height: 256px;
+  background: red; }

@@ -1,5 +1,6 @@
 'use strict';
 
+//noinspection JSAnnotator
 angular.module('core.admin').run(['Menus',
   function (Menus) {
     Menus.addMenuItem('topbar', {
